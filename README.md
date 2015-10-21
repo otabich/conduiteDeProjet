@@ -1,2 +1,2 @@
 # conduitDeProjet
-Projet de UE consuite de projet- Master 2
+Projet de UE conduite de projet- Master 2
