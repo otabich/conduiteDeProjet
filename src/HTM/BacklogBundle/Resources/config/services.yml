@@ -1,0 +1,4 @@
+services:
+#    htm_backlog.example:
+#        class: HTM\BacklogBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

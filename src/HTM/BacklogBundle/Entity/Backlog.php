@@ -1,0 +1,135 @@
+<?php
+
+namespace HTM\BacklogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Backlog
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class Backlog
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionUS", type="string", length=255)
+     */
+    private $descriptionUS;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="priorite", type="integer")
+     */
+    private $priorite;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="difficulte", type="integer")
+     */
+    private $difficulte;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set descriptionUS
+     *
+     * @param string $descriptionUS
+     *
+     * @return Backlog
+     */
+    public function setDescriptionUS($descriptionUS)
+    {
+        $this->descriptionUS = $descriptionUS;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionUS
+     *
+     * @return string
+     */
+    public function getDescriptionUS()
+    {
+        return $this->descriptionUS;
+    }
+
+    /**
+     * Set priorite
+     *
+     * @param integer $priorite
+     *
+     * @return Backlog
+     */
+    public function setPriorite($priorite)
+    {
+        $this->priorite = $priorite;
+
+        return $this;
+    }
+
+    /**
+     * Get priorite
+     *
+     * @return integer
+     */
+    public function getPriorite()
+    {
+        return $this->priorite;
+    }
+
+    /**
+     * Set difficulte
+     *
+     * @param integer $difficulte
+     *
+     * @return Backlog
+     */
+    public function setDifficulte($difficulte)
+    {
+        $this->difficulte = $difficulte;
+
+        return $this;
+    }
+
+    /**
+     * Get difficulte
+     *
+     * @return integer
+     */
+    public function getDifficulte()
+    {
+        return $this->difficulte;
+    }
+}

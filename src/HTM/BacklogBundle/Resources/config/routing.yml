@@ -1,0 +1,25 @@
+htm_backlog_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: HTMBacklogBundle:Default:index }
+
+backlog_ajout:
+    path:     /backlog/ajout
+    defaults: { _controller: HTMBacklogBundle:Backlog:ajout }
+
+backlog_affich:
+    path:     /backlog/affich
+    defaults: { _controller: HTMBacklogBundle:Backlog:affich }
+
+backlog_add:
+    path:     /backlog/add
+    defaults: { _controller: HTMBacklogBundle:Backlog:add }
+backlog_edit:
+    path:  /backlog/edit/{id}
+    defaults: { _controller: HTMBacklogBundle:Backlog:edit }
+    requirements:
+        id:  \d+
+backlog_delete:
+    path:  /backlog/delete/{id}
+    defaults: { _controller: HTMBacklogBundle:Backlog:delete }
+    requirements:
+        id:  \d+

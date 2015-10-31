@@ -1,0 +1,39 @@
+<html>
+<head>
+    {% block stylesheets %}
+        <link href="{{ asset('css/backlog.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/twbs/bootstrap.css') }}" rel="stylesheet" />
+    {% endblock %}
+</head>
+{% block body %}
+    <h2 align="center">Modifier une user story</h2>
+    <center>
+    {{  form_start(f)  }}
+    <table align="center" width="60%" >
+        <tr>
+            <td>{{ form_label(f.id) }}</td>
+            <td>{{ form_widget(f.id) }}</td>
+            <td>{{ form_errors(f.id) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(f.descriptionUS) }}</td>
+            <td>{{ form_widget(f.descriptionUS) }}</td>
+            <td>{{ form_errors(f.descriptionUS) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(f.priorite) }}</td>
+            <td>{{ form_widget(f.priorite) }}</td>
+            <td>{{ form_errors(f.priorite) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(f.difficulte) }}</td>
+            <td>{{ form_widget(f.difficulte) }}</td>
+            <td>{{ form_errors(f.difficulte) }}</td>
+        </tr>
+    </table>
+        <br></br>
+        <center> <button class="btn btn-success" type="submit">Modifier</button></center>
+    {{ form_end(f) }}
+    </center>
+{% endblock %}
+</html>

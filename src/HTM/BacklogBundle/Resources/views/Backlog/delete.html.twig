@@ -1,0 +1,23 @@
+<html>
+<head>
+    {% block stylesheets %}
+        <link href="{{ asset('css/backlog.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/twbs/bootstrap.css') }}" rel="stylesheet" />
+    {% endblock %}
+</head>
+{% block body %}
+    <h2 align="center">Voulez-vous Supprimer cette user story?</h2>
+    <center>
+    {{  form_start(f)  }}
+        <a href="affich" ><button class="btn btn-danger" type="submit">Oui</button></a>
+
+    {% if f.delete is defined %}
+        Are you sure you want to delete the us : {{ f.vars.value.descriptionUS }} ?
+    {% endif %}
+
+    {{ form_end(f) }}
+
+    </center>
+{% endblock %}
+<center><a href="http://localhost/symfony2/web/app_dev.php/backlog/affich" ><button class="btn btn-warning" type="">Non</button></a></center>
+</html>
